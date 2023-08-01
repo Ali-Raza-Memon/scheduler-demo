@@ -27,6 +27,11 @@ public class SchedulerDemoApplication {
 		logger.info("Job current Time "+new Date());
 	}
 
+	@Scheduled(cron = "*/2 * * * * *")
+	public void job2() throws InterruptedException {
+		logger.info("Job2 current Time "+new Date());
+	}
+
 
 
 }
