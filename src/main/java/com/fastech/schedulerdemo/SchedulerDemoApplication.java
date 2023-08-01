@@ -19,7 +19,10 @@ public class SchedulerDemoApplication {
 		SpringApplication.run(SchedulerDemoApplication.class, args);
 	}
 
-	@Scheduled(fixedDelay = 2000L)
+	//fixedDelayString = "PT2S"
+	//fixedDelayString = "PT2M"
+	//fixedDelayString = "PT2H"
+	@Scheduled(fixedDelayString = "PT2M")
 	public void job() throws InterruptedException {
 		logger.info("Job current Time "+new Date());
 		Thread.sleep(1000L);
