@@ -19,7 +19,7 @@ public class SchedulerDemoApplication {
 		SpringApplication.run(SchedulerDemoApplication.class, args);
 	}
 
-	@Scheduled(fixedRate = 2000L)
+	@Scheduled(fixedDelay = 2000L)
 	public void job(){
 		logger.info("Job current Time "+new Date());
 	}
