@@ -22,10 +22,9 @@ public class SchedulerDemoApplication {
 	//fixedDelayString = "PT2S"
 	//fixedDelayString = "PT2M"
 	//fixedDelayString = "PT2H"
-	@Scheduled(fixedDelayString = "PT2M")
+	@Scheduled(cron = "*/2 * * * * *")
 	public void job() throws InterruptedException {
 		logger.info("Job current Time "+new Date());
-		Thread.sleep(1000L);
 	}
 
 
