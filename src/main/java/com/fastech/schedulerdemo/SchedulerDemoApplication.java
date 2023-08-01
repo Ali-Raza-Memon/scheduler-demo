@@ -20,8 +20,9 @@ public class SchedulerDemoApplication {
 	}
 
 	@Scheduled(fixedDelay = 2000L)
-	public void job(){
+	public void job() throws InterruptedException {
 		logger.info("Job current Time "+new Date());
+		Thread.sleep(1000L);
 	}
 
 
